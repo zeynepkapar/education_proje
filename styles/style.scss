@@ -1,0 +1,58 @@
+// google fonts 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+/* css sıfırlama */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    /* sayfa içerisindeki geçişleri daha yumuşak hale getirir. */
+    scroll-behavior: smooth;
+}
+
+// scss importları
+@import './variables';
+@import './global';
+@import './header';
+@import './main';
+@import './educationinfo';
+@import './aboutus';
+@import './topEducations';
+@import './contactUs';
+@import './footer';
+
+
+// ortak css'ler 
+body{
+background-color: $bg-color;
+color: $text-color;
+font-family: "Open Sans", system-ui;
+}
+
+section{
+    padding: 70px 17% 60px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 13px 40px;
+    background-color: $main-color;
+    color: $bg-color;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    @extend .transition;
+    &:hover{
+        border: 2px solid $text-color;
+        background-color: transparent;
+        color: $text-color;
+        transform: translateX(10px);
+    }
+}
+
